@@ -14,4 +14,6 @@
 
 @property (nonatomic) Date *date;
 
+@property (nonatomic) NSString *title;
+
 @end

@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class Date;
+
 @interface DateListViewController : UITableViewController
+
+@property (nonatomic) Date *selectedDate;
 
 @end

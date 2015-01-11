@@ -23,8 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"%@", (NSString *) self.date.date);
-    self.title = @"TESTING";
+    NSLog(@"%@", self.date.date);
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

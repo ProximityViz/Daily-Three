@@ -174,34 +174,16 @@
 
 #pragma mark - Navigation
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    
-//    Date *date = [self.fetchedResultsController objectAtIndexPath:indexPath];
-//    
-//    UINavigationController *navigationController = indexPath.destinationViewController;
-//    ItemListViewController *itemListVC = (ItemListViewController *)navigationController.topViewController;
-//    itemListVC.itemListDate = date.date;
-//    
-//    
-////    ItemListViewController *itemListVC = [[ItemListViewController alloc] init];
-////    itemListVC.itemListDate = date.date;
-////    
-////    itemListVC.title = @"Items";
-////    
-////    [self.navigationController pushViewController:itemListVC animated:YES];
-//    
-//
-//    // not sure if didSelectRowAtIndexPath is what we need. may not need it with coredata
-//    
-//}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.selectedDate = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    NSLog(@"dSRAIP: %@", self.selectedDate.date);
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showItems"]) {
-        UITableViewCell *cell = sender;
-        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-        ItemListViewController *itemListVC = [[ItemListViewController alloc] init];
-        itemListVC.date = [self.fetchedResultsController objectAtIndexPath:indexPath];
-        NSLog(@"%@", itemListVC.date.date);
+        ItemListViewController *itemListVC = segue.destinationViewController;
+        itemListVC.title = @"Test";
+        itemListVC.date = self.selectedDate;
     }
 }
 
