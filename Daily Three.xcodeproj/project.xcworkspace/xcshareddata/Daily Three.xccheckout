@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FF3BEA91-D43B-461E-BA85-30530ECA15DD</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Daily Three</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>07A2102B7977F4B7AD62021BF0D271E524DFAD8A</key>
+		<string>https://github.com/mollietaylor/Daily-Three.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Daily Three.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>07A2102B7977F4B7AD62021BF0D271E524DFAD8A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mollietaylor/Daily-Three.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>07A2102B7977F4B7AD62021BF0D271E524DFAD8A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>07A2102B7977F4B7AD62021BF0D271E524DFAD8A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Daily%20Three</string>
+		</dict>
+	</array>
+</dict>
+</plist>

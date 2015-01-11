@@ -26,10 +26,9 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"EEEE, MMMM d"];
     NSString *formattedDateString = [dateFormatter stringFromDate:self.date.date];
-    
-    NSLog(@"%@", self.date.date);
     self.title = formattedDateString;
     
+#warning maybe this should be in viewDidLoad?
     [self.fetchedResultsController performFetch:nil];
     
 }
@@ -178,6 +177,13 @@
         UINavigationController *navigationController = segue.destinationViewController;
         NewItemViewController *newItemVC = (NewItemViewController *) navigationController.topViewController;
         newItemVC.item = [self.fetchedResultsController objectAtIndexPath:indexPath];        
+    } else if ([segue.identifier isEqualToString:@"addItem"]) {
+        
+        UINavigationController *navigationController = segue.destinationViewController;
+        NewItemViewController *newItemVC = (NewItemViewController *) navigationController.topViewController;
+        // the date property of newItemVC.item needs to be set for the *whole* record of the date, not just the date attribute of the date
+//        newItemVC.item.date = self.date;
+        newItemVC.date = self.date;
     }
 }
 

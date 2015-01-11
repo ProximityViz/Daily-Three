@@ -8,6 +8,7 @@
 
 #import "NewItemViewController.h"
 #import "Item.h"
+#import "Date.h"
 #import "CoreDataStack.h"
 
 @interface NewItemViewController ()
@@ -19,6 +20,9 @@
 @end
 
 @implementation NewItemViewController
+
+- (void)viewWillAppear:(BOOL)animated {
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -55,7 +59,7 @@
     item.title = self.itemTitle.text;
     item.detail = self.itemDetail.text;
     
-    item.date = [NSDate date];
+    item.date = self.date;
     
     [coreDataStack saveContext];
 }
