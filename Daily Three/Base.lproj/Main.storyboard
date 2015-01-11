@@ -116,7 +116,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="btN-hE-U5e" kind="presentation" identifier="edit" id="i5S-Mo-QhX"/>
+                                    <segue destination="btN-hE-U5e" kind="presentation" identifier="editItem" id="i5S-Mo-QhX"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -131,7 +131,7 @@
                     <navigationItem key="navigationItem" title="Items" id="gPp-1R-u3A">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="FoJ-VT-Fe3">
                             <connections>
-                                <segue destination="btN-hE-U5e" kind="presentation" id="R69-eP-VQN"/>
+                                <segue destination="btN-hE-U5e" kind="presentation" identifier="addItem" id="R69-eP-VQN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -155,9 +155,6 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mnw-Tg-zOV" id="TZr-j0-hlf">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="aWO-5W-2Uo" kind="show" identifier="showItems" id="Gvk-Hv-vTb"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -172,6 +169,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="aWO-5W-2Uo" kind="show" identifier="showItems" id="meK-A2-woe"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ddZ-Wn-jK7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -236,6 +236,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="i5S-Mo-QhX"/>
+        <segue reference="R69-eP-VQN"/>
     </inferredMetricsTieBreakers>
 </document>
