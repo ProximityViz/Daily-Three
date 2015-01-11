@@ -10,11 +10,17 @@
 		EC1DA8981A619404007A15D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1DA8971A619404007A15D8 /* main.m */; };
 		EC1DA89B1A619404007A15D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1DA89A1A619404007A15D8 /* AppDelegate.m */; };
 		EC1DA89E1A619404007A15D8 /* Daily_Three.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC1DA89C1A619404007A15D8 /* Daily_Three.xcdatamodeld */; };
-		EC1DA8A11A619404007A15D8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1DA8A01A619404007A15D8 /* ViewController.m */; };
 		EC1DA8A41A619404007A15D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1DA8A21A619404007A15D8 /* Main.storyboard */; };
 		EC1DA8A61A619404007A15D8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC1DA8A51A619404007A15D8 /* Images.xcassets */; };
 		EC1DA8A91A619404007A15D8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC1DA8A71A619404007A15D8 /* LaunchScreen.xib */; };
 		EC1DA8B51A619405007A15D8 /* Daily_ThreeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1DA8B41A619405007A15D8 /* Daily_ThreeTests.m */; };
+		EC1DA8C01A61947A007A15D8 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1DA8BF1A61947A007A15D8 /* CoreDataStack.m */; };
+		EC1DA8C31A61AEC8007A15D8 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1DA8C21A61AEC8007A15D8 /* Item.m */; };
+		EC1DA8C61A61AEC9007A15D8 /* Date.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1DA8C51A61AEC9007A15D8 /* Date.m */; };
+		EC1DA8CA1A61B553007A15D8 /* NewItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1DA8C91A61B553007A15D8 /* NewItemViewController.m */; };
+		EC1DA8CD1A61B5A0007A15D8 /* NewDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1DA8CC1A61B5A0007A15D8 /* NewDateViewController.m */; };
+		EC1DA8D01A61C6FB007A15D8 /* DateListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1DA8CF1A61C6FB007A15D8 /* DateListViewController.m */; };
+		EC1DA8D41A61C737007A15D8 /* ItemListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1DA8D31A61C737007A15D8 /* ItemListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +40,26 @@
 		EC1DA8991A619404007A15D8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EC1DA89A1A619404007A15D8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EC1DA89D1A619404007A15D8 /* Daily_Three.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Daily_Three.xcdatamodel; sourceTree = "<group>"; };
-		EC1DA89F1A619404007A15D8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EC1DA8A01A619404007A15D8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EC1DA8A31A619404007A15D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC1DA8A51A619404007A15D8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EC1DA8A81A619404007A15D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EC1DA8AE1A619405007A15D8 /* Daily ThreeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Daily ThreeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC1DA8B31A619405007A15D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC1DA8B41A619405007A15D8 /* Daily_ThreeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Daily_ThreeTests.m; sourceTree = "<group>"; };
+		EC1DA8BE1A61947A007A15D8 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		EC1DA8BF1A61947A007A15D8 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		EC1DA8C11A61AEC8007A15D8 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		EC1DA8C21A61AEC8007A15D8 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		EC1DA8C41A61AEC9007A15D8 /* Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Date.h; sourceTree = "<group>"; };
+		EC1DA8C51A61AEC9007A15D8 /* Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Date.m; sourceTree = "<group>"; };
+		EC1DA8C81A61B553007A15D8 /* NewItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewItemViewController.h; sourceTree = "<group>"; };
+		EC1DA8C91A61B553007A15D8 /* NewItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewItemViewController.m; sourceTree = "<group>"; };
+		EC1DA8CB1A61B5A0007A15D8 /* NewDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewDateViewController.h; sourceTree = "<group>"; };
+		EC1DA8CC1A61B5A0007A15D8 /* NewDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewDateViewController.m; sourceTree = "<group>"; };
+		EC1DA8CE1A61C6FB007A15D8 /* DateListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateListViewController.h; sourceTree = "<group>"; };
+		EC1DA8CF1A61C6FB007A15D8 /* DateListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateListViewController.m; sourceTree = "<group>"; };
+		EC1DA8D21A61C737007A15D8 /* ItemListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemListViewController.h; sourceTree = "<group>"; };
+		EC1DA8D31A61C737007A15D8 /* ItemListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,14 +101,8 @@
 		EC1DA8941A619404007A15D8 /* Daily Three */ = {
 			isa = PBXGroup;
 			children = (
-				EC1DA8991A619404007A15D8 /* AppDelegate.h */,
-				EC1DA89A1A619404007A15D8 /* AppDelegate.m */,
-				EC1DA89F1A619404007A15D8 /* ViewController.h */,
-				EC1DA8A01A619404007A15D8 /* ViewController.m */,
-				EC1DA8A21A619404007A15D8 /* Main.storyboard */,
-				EC1DA8A51A619404007A15D8 /* Images.xcassets */,
-				EC1DA8A71A619404007A15D8 /* LaunchScreen.xib */,
-				EC1DA89C1A619404007A15D8 /* Daily_Three.xcdatamodeld */,
+				EC1DA8C71A61AFDB007A15D8 /* Data Classes */,
+				EC1DA8D11A61C71C007A15D8 /* View Controllers */,
 				EC1DA8951A619404007A15D8 /* Supporting Files */,
 			);
 			path = "Daily Three";
@@ -99,6 +111,11 @@
 		EC1DA8951A619404007A15D8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EC1DA8991A619404007A15D8 /* AppDelegate.h */,
+				EC1DA89A1A619404007A15D8 /* AppDelegate.m */,
+				EC1DA8A51A619404007A15D8 /* Images.xcassets */,
+				EC1DA8A71A619404007A15D8 /* LaunchScreen.xib */,
+				EC1DA89C1A619404007A15D8 /* Daily_Three.xcdatamodeld */,
 				EC1DA8961A619404007A15D8 /* Info.plist */,
 				EC1DA8971A619404007A15D8 /* main.m */,
 			);
@@ -120,6 +137,35 @@
 				EC1DA8B31A619405007A15D8 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC1DA8C71A61AFDB007A15D8 /* Data Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EC1DA8BE1A61947A007A15D8 /* CoreDataStack.h */,
+				EC1DA8BF1A61947A007A15D8 /* CoreDataStack.m */,
+				EC1DA8C41A61AEC9007A15D8 /* Date.h */,
+				EC1DA8C51A61AEC9007A15D8 /* Date.m */,
+				EC1DA8C11A61AEC8007A15D8 /* Item.h */,
+				EC1DA8C21A61AEC8007A15D8 /* Item.m */,
+			);
+			name = "Data Classes";
+			sourceTree = "<group>";
+		};
+		EC1DA8D11A61C71C007A15D8 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EC1DA8CE1A61C6FB007A15D8 /* DateListViewController.h */,
+				EC1DA8CF1A61C6FB007A15D8 /* DateListViewController.m */,
+				EC1DA8CB1A61B5A0007A15D8 /* NewDateViewController.h */,
+				EC1DA8CC1A61B5A0007A15D8 /* NewDateViewController.m */,
+				EC1DA8D21A61C737007A15D8 /* ItemListViewController.h */,
+				EC1DA8D31A61C737007A15D8 /* ItemListViewController.m */,
+				EC1DA8C81A61B553007A15D8 /* NewItemViewController.h */,
+				EC1DA8C91A61B553007A15D8 /* NewItemViewController.m */,
+				EC1DA8A21A619404007A15D8 /* Main.storyboard */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,9 +268,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC1DA8C31A61AEC8007A15D8 /* Item.m in Sources */,
+				EC1DA8CD1A61B5A0007A15D8 /* NewDateViewController.m in Sources */,
+				EC1DA8C61A61AEC9007A15D8 /* Date.m in Sources */,
+				EC1DA8D41A61C737007A15D8 /* ItemListViewController.m in Sources */,
+				EC1DA8C01A61947A007A15D8 /* CoreDataStack.m in Sources */,
 				EC1DA89B1A619404007A15D8 /* AppDelegate.m in Sources */,
+				EC1DA8CA1A61B553007A15D8 /* NewItemViewController.m in Sources */,
+				EC1DA8D01A61C6FB007A15D8 /* DateListViewController.m in Sources */,
 				EC1DA89E1A619404007A15D8 /* Daily_Three.xcdatamodeld in Sources */,
-				EC1DA8A11A619404007A15D8 /* ViewController.m in Sources */,
 				EC1DA8981A619404007A15D8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

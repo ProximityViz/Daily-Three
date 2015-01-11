@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ItemListViewController.h
 //  Daily Three
 //
 //  Created by Mollie on 1/10/15.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ItemListViewController : UITableViewController
 
+@property (nonatomic) NSDate *itemListDate;
 
 @end
-
