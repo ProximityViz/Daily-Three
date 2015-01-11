@@ -9,6 +9,7 @@
 #import "ItemListViewController.h"
 #import "CoreDataStack.h"
 #import "Item.h"
+#import "NewItemViewController.h"
 
 @interface ItemListViewController () <NSFetchedResultsControllerDelegate>
 
@@ -161,11 +162,16 @@
 }
 */
 
-//#pragma mark - Navigation
-//
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    // Get the new view controller using [segue destinationViewController].
-//    // Pass the selected object to the new view controller.
-//}
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"edit"]) {
+        UITableViewCell *cell = sender;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        UINavigationController *navigationController = segue.destinationViewController;
+        NewItemViewController *newItemVC = (NewItemViewController *) navigationController.topViewController;
+        newItemVC.item = [self.fetchedResultsController objectAtIndexPath:indexPath];        
+    }
+}
 
 @end

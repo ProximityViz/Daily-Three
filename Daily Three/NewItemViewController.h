@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class Item;
+
 @interface NewItemViewController : UIViewController
+
+@property (nonatomic, strong) Item *item;
 
 @end

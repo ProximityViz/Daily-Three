@@ -116,7 +116,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="btN-hE-U5e" kind="presentation" id="i5S-Mo-QhX"/>
+                                    <segue destination="btN-hE-U5e" kind="presentation" identifier="edit" id="i5S-Mo-QhX"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

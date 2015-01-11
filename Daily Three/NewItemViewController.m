@@ -23,6 +23,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    if (self.item != nil) {
+        self.itemTitle.text = self.item.title;
+        self.itemDetail.text = self.item.detail;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,8 +60,20 @@
     [coreDataStack saveContext];
 }
 
+- (void)updateItem {
+    self.item.title = self.itemTitle.text;
+    self.item.detail = self.itemDetail.text;
+    
+    CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
+    [coreDataStack saveContext];
+}
+
 - (IBAction)doneWasPressed:(id)sender {
-    [self insertItem];
+    if (self.item != nil) {
+        [self updateItem];
+    } else {
+        [self insertItem];
+    }
     [self dismissSelf];
 }
 
