@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="D4N-Le-qbl">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--New Date-->
@@ -65,20 +66,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qTE-IC-0o6">
-                                <rect key="frame" x="16" y="72" width="568" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qTE-IC-0o6">
+                                <rect key="frame" x="16" y="72" width="568" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ZKQ-32-Iva"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5M3-fT-ibd">
-                                <rect key="frame" x="16" y="110" width="568" height="181"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5M3-fT-ibd">
+                                <rect key="frame" x="16" y="124" width="568" height="180"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="hx4-7v-WGb"/>
+                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5M3-fT-ibd" firstAttribute="leading" secondItem="DQj-UY-toq" secondAttribute="leadingMargin" id="JDh-eX-raX"/>
+                            <constraint firstItem="5M3-fT-ibd" firstAttribute="top" secondItem="qTE-IC-0o6" secondAttribute="bottom" constant="8" id="KGl-hQ-JXz"/>
+                            <constraint firstItem="5M3-fT-ibd" firstAttribute="trailing" secondItem="DQj-UY-toq" secondAttribute="trailingMargin" id="Lc6-pk-Gre"/>
+                            <constraint firstItem="qTE-IC-0o6" firstAttribute="top" secondItem="19b-wv-WdN" secondAttribute="bottom" constant="8" id="UG0-it-kfr"/>
+                            <constraint firstItem="qTE-IC-0o6" firstAttribute="leading" secondItem="DQj-UY-toq" secondAttribute="leadingMargin" id="hID-cj-jFw"/>
+                            <constraint firstItem="qTE-IC-0o6" firstAttribute="trailing" secondItem="DQj-UY-toq" secondAttribute="trailingMargin" id="sOg-ga-3WX"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New/Edit Item" id="iOi-UT-D0L">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="dsc-PG-eXJ">
