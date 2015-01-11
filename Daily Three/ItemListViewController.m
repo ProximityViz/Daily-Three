@@ -56,10 +56,15 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    UITableViewCell *cell = [[tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
+    
+#warning Needs to only show items where item.date = self.date
+// numberOfRowsInSection and numberOfSectionsInTableView might need to change as well
+// maybe we can change the fetchedResultsController?
     
     Item *item = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = item.title;
+    cell.detailTextLabel.text = item.detail;
     
     return cell;
 }
