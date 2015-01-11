@@ -9,6 +9,7 @@
 #import "ItemListViewController.h"
 #import "CoreDataStack.h"
 #import "Item.h"
+#import "Date.h"
 #import "NewItemViewController.h"
 
 @interface ItemListViewController () <NSFetchedResultsControllerDelegate>
@@ -21,6 +22,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSLog(@"%@", (NSString *) self.date.date);
+    self.title = @"TESTING";
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

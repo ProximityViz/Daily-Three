@@ -176,15 +176,33 @@
 
 //- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 //    
+//    Date *date = [self.fetchedResultsController objectAtIndexPath:indexPath];
+//    
+//    UINavigationController *navigationController = indexPath.destinationViewController;
+//    ItemListViewController *itemListVC = (ItemListViewController *)navigationController.topViewController;
+//    itemListVC.itemListDate = date.date;
+//    
+//    
+////    ItemListViewController *itemListVC = [[ItemListViewController alloc] init];
+////    itemListVC.itemListDate = date.date;
+////    
+////    itemListVC.title = @"Items";
+////    
+////    [self.navigationController pushViewController:itemListVC animated:YES];
+//    
 //
 //    // not sure if didSelectRowAtIndexPath is what we need. may not need it with coredata
 //    
-//    //    FriendDetailVC *detailVC = [[FriendDetailVC alloc] init];
-//    //
-//    //    detailVC.friendInfo = friends[indexPath.row];
-//    //
-//    //    [self.navigationController pushViewController:detailVC animated:YES];
-//    
 //}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showItems"]) {
+        UITableViewCell *cell = sender;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        ItemListViewController *itemListVC = [[ItemListViewController alloc] init];
+        itemListVC.date = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        NSLog(@"%@", itemListVC.date.date);
+    }
+}
 
 @end

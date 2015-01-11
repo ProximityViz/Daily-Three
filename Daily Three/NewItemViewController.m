@@ -69,7 +69,7 @@
 }
 
 - (IBAction)doneWasPressed:(id)sender {
-    if (self.item != nil) {
+    if (self.item.title != nil) {
         [self updateItem];
     } else {
         [self insertItem];
