@@ -10,4 +10,6 @@
 
 @interface NewDateViewController : UIViewController
 
+@property NSMutableArray *dates;
+
 @end

@@ -7,8 +7,6 @@
 //
 
 #import "NewDateViewController.h"
-#import "Date.h"
-#import "CoreDataStack.h"
 
 @interface NewDateViewController ()
 
@@ -28,30 +26,57 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (void)dismissSelf {
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)insertDate {
-    CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
-    Date *date = [NSEntityDescription insertNewObjectForEntityForName:@"Date" inManagedObjectContext:coreDataStack.managedObjectContext];
-    date.date = self.datePicker.date;
-    
-    [coreDataStack saveContext];
-}
-
 - (IBAction)doneWasPressed:(id)sender {
-    [self insertDate];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    if ([self.dates count] == 0) {
+        self.dates = [[NSMutableArray alloc] init];
+    }
+    
+    // format date
+    NSDate *date = self.datePicker.date;
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"EEEE, MMMM d"];
+    NSString *formattedDateString = [dateFormatter stringFromDate:date];
+    
+    // add date and its 3 items to data
+    NSDictionary *dateData = @{
+                               @"unformattedDate": date,
+                               @"date": formattedDateString,
+                               @"items": @[ @"A", @"B", @"C" ]
+                           };
+    
+    // there's probably a better way to do this
+
+    BOOL dateExists = NO; // initializing
+    for (NSDictionary *dictionary in self.dates) {
+        if ([dictionary[@"date"] isEqualToString:formattedDateString]) {
+            dateExists = YES;
+            NSString *title = [NSString stringWithFormat:@"That date already has a to-do list"];
+            UIAlertView *alertViewDraw = [[UIAlertView alloc] initWithTitle:title message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
+            [alertViewDraw show];
+            return;
+        }
+    }
+    
+    if (dateExists == NO) {
+        [self.dates addObject:dateData];
+    }
+    
+    // sort
+    NSSortDescriptor *unformattedDateDescriptor = [[NSSortDescriptor alloc] initWithKey:@"unformattedDate" ascending:NO];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:unformattedDateDescriptor];
+    self.dates = [[self.dates sortedArrayUsingDescriptors:sortDescriptors] mutableCopy];
+    
+    
+    [defaults setObject:self.dates forKey:@"dates"];
+    
+    
     [self dismissSelf];
 }
 

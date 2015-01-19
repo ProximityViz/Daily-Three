@@ -54,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="1766" y="-687"/>
         </scene>
-        <!--New/Edit Item-->
+        <!--Edit Item-->
         <scene sceneID="czl-jC-lvq">
             <objects>
-                <viewController id="clB-aS-ltq" customClass="NewItemViewController" sceneMemberID="viewController">
+                <viewController id="clB-aS-ltq" customClass="EditItemViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="19b-wv-WdN"/>
                         <viewControllerLayoutGuide type="bottom" id="iBV-Hc-B6f"/>
@@ -95,7 +95,7 @@
                             <constraint firstItem="qTE-IC-0o6" firstAttribute="trailing" secondItem="DQj-UY-toq" secondAttribute="trailingMargin" id="sOg-ga-3WX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="New/Edit Item" id="iOi-UT-D0L">
+                    <navigationItem key="navigationItem" title="Edit Item" id="iOi-UT-D0L">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="dsc-PG-eXJ">
                             <connections>
                                 <action selector="cancelWasPressed:" destination="clB-aS-ltq" id="AUI-7m-c8k"/>
@@ -180,7 +180,7 @@
                     <navigationItem key="navigationItem" title="Dates" id="QGn-PQ-f7e">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="GI1-aQ-AWd">
                             <connections>
-                                <segue destination="dLZ-Ca-61K" kind="presentation" id="3Gy-Z3-Q3P"/>
+                                <segue destination="dLZ-Ca-61K" kind="presentation" identifier="addDate" id="3Gy-Z3-Q3P"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

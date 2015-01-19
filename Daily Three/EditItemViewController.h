@@ -8,12 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@class Item;
-@class Date;
-
-@interface NewItemViewController : UIViewController
-
-@property (nonatomic, strong) Item *item;
-@property (nonatomic, strong) Date *date;
+@interface EditItemViewController : UIViewController
 
 @end

@@ -8,12 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@class Date;
-
 @interface ItemListViewController : UITableViewController
-
-@property (nonatomic) Date *date;
-
-@property (nonatomic) NSString *title;
 
 @end

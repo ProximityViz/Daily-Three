@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@class Date;
-
 @interface DateListViewController : UITableViewController
 
-@property (nonatomic) Date *selectedDate;
+@property NSMutableArray *dates;
 
 @end
