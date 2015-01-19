@@ -11,5 +11,6 @@
 @interface DateListViewController : UITableViewController
 
 @property NSMutableArray *dates;
+@property NSDictionary *selectedDate;
 
 @end

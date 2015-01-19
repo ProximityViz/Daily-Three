@@ -88,14 +88,17 @@
 #pragma mark - Navigation
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    
+    self.selectedDate = self.dates[indexPath.row];
+    [self performSegueWithIdentifier:@"showItems" sender:self.selectedDate];
     
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showItems"]) {
-//        ItemListViewController *itemListVC = segue.destinationViewController;
-//        itemListVC.date = self.selectedDate;
+        ItemListViewController *itemListVC = segue.destinationViewController;
+        itemListVC.selectedDate = self.selectedDate;
+        itemListVC.dates = self.dates;
     } else if ([segue.identifier isEqualToString:@"addDate"]) {
         UINavigationController *navigationController = segue.destinationViewController;
         NewDateViewController *newDateVC = (NewDateViewController *) navigationController.topViewController;

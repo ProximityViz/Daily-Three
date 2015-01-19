@@ -48,7 +48,7 @@
     NSDictionary *dateData = @{
                                @"unformattedDate": date,
                                @"date": formattedDateString,
-                               @"items": @[ @"A", @"B", @"C" ]
+                               @"items": @[ @"Item 1", @"Item 2", @"Item 3" ]
                            };
     
     // there's probably a better way to do this

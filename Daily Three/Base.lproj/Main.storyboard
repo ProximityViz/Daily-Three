@@ -143,13 +143,7 @@
                     <toolbarItems>
                         <barButtonItem title="Item" id="gGC-aA-Y0C"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Items" id="gPp-1R-u3A">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="FoJ-VT-Fe3">
-                            <connections>
-                                <segue destination="btN-hE-U5e" kind="presentation" identifier="addItem" id="R69-eP-VQN"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Items" id="gPp-1R-u3A"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oXe-xh-OhR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -250,7 +244,4 @@
             <point key="canvasLocation" x="2454" y="-214"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="R69-eP-VQN"/>
-    </inferredMetricsTieBreakers>
 </document>

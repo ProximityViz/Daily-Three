@@ -10,4 +10,7 @@
 
 @interface ItemListViewController : UITableViewController
 
+@property NSMutableArray *dates;
+@property NSDictionary *selectedDate;
+
 @end

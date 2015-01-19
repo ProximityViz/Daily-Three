@@ -37,26 +37,31 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 1;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [[tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
     
+    self.tableView.rowHeight = (self.view.frame.size.height - 64) / 3;
+    
+    cell.textLabel.text = self.selectedDate[@"items"][indexPath.row];
+    cell.detailTextLabel.text = @"Testing";
+    
     
     return cell;
 }
 
-#pragma mark - Delete item
-
-- (UITableViewCellEditingStyle) tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return UITableViewCellEditingStyleDelete;
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    
-}
+//#pragma mark - Delete item
+//
+//- (UITableViewCellEditingStyle) tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return UITableViewCellEditingStyleDelete;
+//}
+//
+//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+//    
+//    
+//}
 
 # pragma mark - Remove separator inset
 
@@ -81,9 +86,6 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"editItem"]) {
-        
-        
-    } else if ([segue.identifier isEqualToString:@"addItem"]) {
         
         
     }
