@@ -1,6 +1,7 @@
 To do:
 
 * get MVP working
+	* fix item view to only show items for that date
 * monthly section headers for DateListViewController
 * placeholder text for TextView https://github.com/glaszig/SZTextView
 * only allow 3 items per day
