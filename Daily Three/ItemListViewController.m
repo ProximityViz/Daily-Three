@@ -17,6 +17,11 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    
+//    self.dates = [[defaults arrayForKey:@"dates"] mutableCopy];
+//    
+    [self.tableView reloadData];
     
 }
 
@@ -45,8 +50,11 @@
     
     self.tableView.rowHeight = (self.view.frame.size.height - 64) / 3;
     
-    cell.textLabel.text = self.selectedDate[@"items"][indexPath.row];
-    cell.detailTextLabel.text = @"Testing";
+    
+    NSDictionary *item = self.selectedDate[@"items"][indexPath.row];
+    cell.textLabel.text = item[@"title"];
+    cell.detailTextLabel.text = item[@"detail"];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     
     return cell;
@@ -84,9 +92,23 @@
 
 #pragma mark - Navigation
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
     if ([segue.identifier isEqualToString:@"editItem"]) {
-        
+        UINavigationController *navigationController = segue.destinationViewController;
+        EditItemViewController *editItemVC = (EditItemViewController *) navigationController.topViewController;
+        editItemVC.dates = self.dates;
+        editItemVC.selectedDate = self.selectedDate;
+        if([sender isKindOfClass:[UITableViewCell class]]) {
+            NSIndexPath * indexPath = [self.tableView indexPathForCell:sender];
+            editItemVC.selectedItem = (int) indexPath.row;
+        }
         
     }
 }

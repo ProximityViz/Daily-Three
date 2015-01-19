@@ -46,9 +46,21 @@
     
     // add date and its 3 items to data
     NSDictionary *dateData = @{
-                               @"unformattedDate": date,
-                               @"date": formattedDateString,
-                               @"items": @[ @"Item 1", @"Item 2", @"Item 3" ]
+       @"unformattedDate": date,
+       @"date": formattedDateString,
+       @"items": @[ @{
+                        @"title": @"Item 1",
+                        @"detail": @"detail text"
+                    },
+                    @{
+                        @"title": @"Item 2",
+                        @"detail": @"detail text"
+                    },
+                    @{
+                        @"title": @"Item 3",
+                        @"detail": @"detail text"
+                    }
+                    ]
                            };
     
     // there's probably a better way to do this

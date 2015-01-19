@@ -12,5 +12,6 @@
 
 @property NSMutableArray *dates;
 @property NSDictionary *selectedDate;
+@property int selectedItem;
 
 @end
